@@ -1,38 +1,34 @@
-.App {
+@font-face {
+  font-family: 'MOON';
+  src: local('MOON'), url('./fonts/MOON/Moon2.0-Regular.otf') format('truetype');
+}
+
+body {
+  font-family: "MOON";
+}
+
+.intro {
+  font-family: "BONDI";
   text-align: center;
+  margin-top: 250px;
+  font-size: calc(40px + 2vmin);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.introButton {
+  font-family: "BONDI";
   font-size: calc(10px + 2vmin);
+  margin-top: 15px;
+  background-color: black;
   color: white;
+  align-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+  font-family: "BONDI";
 }
+.mainNav {
+  justify-content: center;
+  align-items: center;
+  font-size: calc(5px + 2vmin);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

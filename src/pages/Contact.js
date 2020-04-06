@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
 
 class Contact extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-        
-    };
-    
-}
 
-
-  
-  render() {
-      return (
-      <div>
-        <h1>
-          Contact
-        </h1>
-      </div>
-    );
+  componentDidMount(){
+   this.setState({ title: 'Contact us' });
   }
-}
+ 
+  render() {
+   return (
+    <div>
+     <article>Your contact us contents will be here..</article>  
+    </div>
+   );
+  }
+ }
+ 
 
 export default Contact
