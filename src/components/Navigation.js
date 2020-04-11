@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Navbar } from 'reactstrap';
+
 
 class Navigation extends Component {
   constructor(props) {
@@ -14,23 +14,24 @@ class Navigation extends Component {
 
     return (
       
-        <Navbar className="mainNav">
+          <container className="navContainer">
             <div onClick={this.props.changeState('Home')}>
-            <h1>Home</h1>
+            <h1 className="navText">HOME</h1>
             </div>
 
             <div onClick={this.props.changeState('About')}>
-            <h1>About</h1>
+            <h1 className="navText">ABOUT</h1>
             </div>
 
             <div onClick={this.props.changeState('Projects')}>
-            <h1>Projects</h1>
+            <h1 className="navText">PROJECTS</h1>
             </div>  
 
             <div onClick={this.props.changeState('Contact')}>
-            <h1>Contact</h1>
+            <h1 className="navText">CONTACT</h1>
             </div>
-        </Navbar>
+          </container>
+
     )
       
   }

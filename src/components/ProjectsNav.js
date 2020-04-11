@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Navbar } from 'reactstrap';
 
 class ProjectsNav extends Component {
   constructor(props) {
     super(props);
     this.state={
-        currentPage: "Intro"
+        currentPage: "All"
     };
     
 }
@@ -14,24 +13,24 @@ class ProjectsNav extends Component {
   render() {
 
     return (
-      
-        <Navbar>
-        <div onClick={this.props.changeState('All')}>
-        <h1>All</h1>
+        <container className= "projectNav">
+        <div className="projectMenu" onClick={this.props.changeProjectsToShow('All')}>
+        All
         </div>
 
-        <div onClick={this.props.changeState('Bootstrap')}>
-        <h1>Bootstrap</h1>
+        <div className="projectMenu" onClick={this.props.changeProjectsToShow('Bootstrap')}>
+        Bootstrap
+
         </div>
 
-        <div onClick={this.props.changeState('React')}>
-        <h1>React</h1>
+        <div className="projectMenu" onClick={this.props.changeProjectsToShow('React')}>
+        React
         </div>  
 
-        <div onClick={this.props.changeState('reactNative')}>
-        <h1>React Native</h1>
+        <div className="projectMenu" onClick={this.props.changeProjectsToShow('React Native')}>
+        React Native
         </div>
-        </Navbar>
+        </container>
     )
       
   }

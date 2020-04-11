@@ -2,14 +2,13 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "MOON";
+  font-family: 'MOON';
 }
 
 
 
 @font-face {
-  font-family: 'MOON';
-  src: local('MOON'), url('./fonts/MOON/Moon2.0-Regular.otf') format('truetype');
-  font-family: 'BONDI';
-  src: local('BONDI'), url('./fonts/BondiFont/Bondi.otf') format('truetype');
-}
+  font-family: 'Hiragino';
+  src: local('Hiragino'), url('./assets/fonts/hiragino.otf') format('truetype');
+} 
+

@@ -7,7 +7,7 @@ import Contact from './Contact';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
-import ProjectsNav from '../components/ProjectsNav'
+
 
 class Landing extends Component {
   constructor(props) {
@@ -29,13 +29,12 @@ changeState = (pageToSet) => () => {
     const { currentPage } = this.state
       return (
       <div>
-        {currentPage !== 'Intro' && <Header currentPage={currentPage} changeState={this.changeState}/>}
         {currentPage !== 'Intro' && <Navigation changeState={this.changeState}/>}
+        {currentPage !== 'Intro' && <Header currentPage={currentPage} changeState={this.changeState}/>}
         {currentPage === 'Intro' && <Intro changeState={this.changeState}/>}
         {currentPage === 'Home' && <Home/>}
         {currentPage === 'About' && <About/>}
-        {currentPage === 'Projects' && <Projects/>}
-        {currentPage === 'Projects' && <ProjectsNav changeState={this.changeState}/>}
+        {currentPage === 'Projects' && <Projects changeState={this.changeState}/>}
         {currentPage === 'Contact' && <Contact/>}
         {currentPage !== 'Intro' && <Footer changeState={this.changeState}/>}
       </div>

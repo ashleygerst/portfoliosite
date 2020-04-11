@@ -1,34 +1,62 @@
-@font-face {
+/* @font-face {
   font-family: 'MOON';
   src: local('MOON'), url('./fonts/MOON/Moon2.0-Regular.otf') format('truetype');
-}
+} */
 
 body {
-  font-family: "MOON";
+  font-family: "Hiragino" !important;
+  font-size: 20px;
 }
 
 .intro {
-  font-family: "BONDI";
+  font-family: "Hiragino" !important;
   text-align: center;
   margin-top: 250px;
   font-size: calc(40px + 2vmin);
+  color: #707070;
+  margin-bottom: 30px;
 }
 
 .introButton {
-  font-family: "BONDI";
+  font-family: "Hiragino";
   font-size: calc(10px + 2vmin);
-  margin-top: 15px;
+  margin-top: 40px;
   background-color: black;
   color: white;
-  align-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .header {
-  font-family: "BONDI";
+  font-family: "Hiragino";
+  text-align: center;
+  background-color: white;
+  color: #707070;
 }
-.mainNav {
-  justify-content: center;
-  align-items: center;
-  font-size: calc(5px + 2vmin);
+.navContainer {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20;
+  flex-shrink: 1;
+}
 
+.projectNav {
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 30;
+  flex-shrink: 1;
+  font-size: 20px;
+  color: #707070;
+}
+
+.projectMenu {
+  font-size: 20px;
+  color: #707070;
+}
+
+.navText {
+  font-size: 20px;
+  color: #707070;
 }

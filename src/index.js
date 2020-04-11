@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import './MOON/Moon2.0-Light.otf'
+import './assets/fonts/MOON/Moon2.0-Light.otf';
+import './assets/fonts/BondiFont/Bondi.otf'
 import 'font-awesome/css/font-awesome.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as serviceWorker from './serviceWorker';

@@ -6,14 +6,13 @@ class Header extends Component {
       return (
         <div>
         {this.props.currentPage === 'Home' && 
-          <Jumbotron className="header"><h1>Ashley Gerst</h1></Jumbotron>}
+          <Jumbotron className="header bg-white"><h1>ASHLEY GERST</h1></Jumbotron>}
         {this.props.currentPage === 'About' &&
-          <Jumbotron className="header"><h1>About Me</h1></Jumbotron> }
+          <Jumbotron className="header bg-white"><h1>ABOUT ME</h1></Jumbotron> }
         {this.props.currentPage === 'Projects' &&
-          <Jumbotron className="header"><h1>My Projects</h1></Jumbotron> }
+          <Jumbotron className="header bg-white"><h1>MY PROJECTS</h1></Jumbotron> }
         {this.props.currentPage === 'Contact' &&
-          <Jumbotron className="header"><h1>Get in Touch</h1></Jumbotron> }
-        {this.props.currentPage}
+          <Jumbotron className="header bg-white"><h1>GET IN TOUCH</h1></Jumbotron> }
         </div>
     );
   }
