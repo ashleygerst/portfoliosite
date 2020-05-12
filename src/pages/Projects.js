@@ -1,7 +1,8 @@
 import React from 'react';
 import { PROJECTS } from '../shared/projects';
 import ProjectsNav from '../components/ProjectsNav';
-import { Card, CardImg, CardBody, CardTitle, Col, CardGroup } from 'reactstrap';
+
+
 
 
 class Projects extends React.Component {
@@ -18,54 +19,63 @@ class Projects extends React.Component {
         projectsToShow : projectsToShow
       })
    }
-
+   determineImageStyle = (i) => {
+    switch (i) {
+      case 0 : 
+        return "nucampImg1"
+      case 1 : 
+        return "eastwestImg"
+      case 2 :
+        return "nucampImg2"
+      case 3 :
+        return "hayloImg"
+      default : 
+        return "projectImage"
+    }
+   }
    renderProjects = () => {
     if (this.state.projectsToShow === 'All') {
-      return (PROJECTS.map(project => {
+      return (PROJECTS.map((project, i) => {
         return (
+
+          <container className={(i % 2 === 0) ? 'projectsNav' : 'projectsNav2'}>
+          <a className={this.determineImageStyle(i)} href={project.link}><img className={this.determineImageStyle(i)} src={project.image} alt="projects" top width="100%"/></a>
+          <hr/>
+          <br />
           <div>
-            <Col sm="3">
-            <CardGroup>
-            <Card>
-            <a href={project.link}><CardImg src={project.image} alt="projects" top width="100%"/></a>
-            <CardBody>
-            <CardTitle>{project.name}</CardTitle>
-            </CardBody>
-            </Card>
-            </CardGroup>
-            </Col>
-          </div>
+          <h4 className={(i % 2 === 0) ? 'projectsName' : 'projectsName2'}>{project.name}</h4>
+          <h5 className={(i % 2 === 0) ? 'projectsName' : 'projectsName2'}>{project.framework}</h5>
+          <p className={(i % 2 === 0) ? 'projectsName' : 'projectsName2'}>{project.description}</p></div>
+          </container>
+
         )
       }))
     }
     else {
      const filteredArray =  this.state.projects.filter(project => project.framework === this.state.projectsToShow);
-     return (filteredArray.map(project => {
-       return (
+     return (filteredArray.map((project, i) => {
+      return (
+
+        <container className={(i % 2 === 0) ? 'projectsNav' : 'projectsNav2'}>
+        <a className={this.determineImageStyle(i)} href={project.link}><img className={this.determineImageStyle(i)} src={project.image} alt="projects" top width="100%"/></a>
+        <hr/>
+        <br />
         <div>
-        <Col sm="3">
-          <CardGroup>
-            <Card>
-              <a href={project.link}><CardImg src={project.image} alt="projects" top width="100%"/></a>
-              <CardBody>
-                <CardTitle>{project.name}</CardTitle>
-              </CardBody>
-            </Card>
-          </CardGroup>
-        </Col>
-      </div>
+        <h4 className={(i % 2 === 0) ? 'projectsName' : 'projectsName2'}>{project.name}</h4>
+        <h5 className={(i % 2 === 0) ? 'projectsName' : 'projectsName2'}>{project.framework}</h5>
+        <p className={(i % 2 === 0) ? 'projectsName' : 'projectsName2'}>{project.description}</p></div>
+        </container>
+
+
        )
      }))
     }
    }
 
   render() {
-    // const name = this.projects().map(project => project.name)
-    // const image = this.projects().map(project => project.image)
-    // const link = this.projects().map(project => project.link)
     return (
       <div>
-      <ProjectsNav changeProjectsToShow={this.changeProjectsToShow}/>
+      <ProjectsNav changeProjectsToShow={this.changeProjectsToShow} projectsToShow={this.state.projectsToShow}/>
       <div>
         {this.renderProjects()}
       </div>

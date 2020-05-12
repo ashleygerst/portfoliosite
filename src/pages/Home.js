@@ -1,19 +1,16 @@
 import React, { Component } from 'react';
+import HomeSubHeader from '../components/HomeSubHeader'
+
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-        
-    };
-    
-}
 
-
-  
   render() {
       return (
-        <div>Home Page</div>
+        <div className="container">
+          <div className="homeSubHeader">
+                {<HomeSubHeader HomeSubHeader/>}
+          </div>
+        </div>
     );
   }
 }

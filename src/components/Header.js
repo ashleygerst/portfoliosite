@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
-import { Jumbotron } from 'reactstrap';
 
 class Header extends Component {
   render(){
       return (
         <div>
         {this.props.currentPage === 'Home' && 
-          <Jumbotron className="header bg-white"><h1>ASHLEY GERST</h1></Jumbotron>}
+          <div className="headerMain"><img className="purp" src= "purp.png" alt="purple"/><p className="headerText homeHeader1">ashley 
+          </p><h1 className="headerText homeHeader2">gerst</h1></div>}
         {this.props.currentPage === 'About' &&
-          <Jumbotron className="header bg-white"><h1>ABOUT ME</h1></Jumbotron> }
+          <div className="headerMain"><img className="purp" src= "purp.png" alt="purple"/><h1 className="headerText homeHeader1">about</h1><h1 className="headerText homeHeader2">me</h1></div> }
         {this.props.currentPage === 'Projects' &&
-          <Jumbotron className="header bg-white"><h1>MY PROJECTS</h1></Jumbotron> }
+          <div className="headerMain"><img className="purp" src= "purp.png" alt="purple"/><h1 className="headerText homeHeader1">my</h1><h1 className="headerText homeHeader2">projects</h1></div> }
         {this.props.currentPage === 'Contact' &&
-          <Jumbotron className="header bg-white"><h1>GET IN TOUCH</h1></Jumbotron> }
+          <div className="headerMain"><img className="purp" src= "purp.png" alt="purple"/><h1 className="headerText homeHeader1">get</h1><h1 className="headerText homeHeader2">in touch</h1></div> }
         </div>
     );
   }

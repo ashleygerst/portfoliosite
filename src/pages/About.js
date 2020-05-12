@@ -1,21 +1,38 @@
 import React, { Component } from 'react';
+import Education from '../components/Education';
+import AboutHome from '../components/aboutHome';
+import Employment from '../components/Employment';
+import Skills from '../components/Skills';
+import Tools from '../components/Tools';
 
 class About extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-        
-    };
-    
-}
+  constructor (props) {
+    super(props)
+    this.state = {
+      currentPage: "About",
+      aboutCategory: "aboutHome"
+    }
+  }
 
+  changeAboutCategory = (aboutCategory) => () => {
+      this.setState ({
+        aboutCategory : aboutCategory
+      })
+   }
 
-  
   render() {
+    const { aboutCategory } = this.state
     return (
-      <div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div>
+          <AboutHome changeAboutCategory={this.changeAboutCategory} aboutCategory={aboutCategory} />
+          <div>
+            {aboutCategory === 'Education' && <Education />}
+            {aboutCategory === 'Employment' && <Employment />}
+            {aboutCategory === 'Skills' && <Skills />}
+            {aboutCategory === 'Tools' && <Tools />}
+        </div>
       </div>
+
     );
   }
 }

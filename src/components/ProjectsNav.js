@@ -1,33 +1,27 @@
 import React, { Component } from 'react';
 
+
 class ProjectsNav extends Component {
-  constructor(props) {
-    super(props);
-    this.state={
-        currentPage: "All"
-    };
-    
-}
 
 
   render() {
 
     return (
         <container className= "projectNav">
-        <div className="projectMenu" onClick={this.props.changeProjectsToShow('All')}>
+        <div className={(this.props.projectsToShow === 'All') ? 'projectMenu activeProject' : 'projectMenu'} onClick={this.props.changeProjectsToShow('All')}>
         All
         </div>
 
-        <div className="projectMenu" onClick={this.props.changeProjectsToShow('Bootstrap')}>
+        <div className={(this.props.projectsToShow === 'Bootstrap') ? 'projectMenu activeProject' : 'projectMenu'} onClick={this.props.changeProjectsToShow('Bootstrap')}>
         Bootstrap
 
         </div>
 
-        <div className="projectMenu" onClick={this.props.changeProjectsToShow('React')}>
+        <div className={(this.props.projectsToShow === 'React') ? 'projectMenu activeProject' : 'projectMenu'} onClick={this.props.changeProjectsToShow('React')}>
         React
         </div>  
 
-        <div className="projectMenu" onClick={this.props.changeProjectsToShow('React Native')}>
+        <div className={(this.props.projectsToShow === 'reactNative') ? 'projectMenu activeProject' : 'projectMenu'} onClick={this.props.changeProjectsToShow('reactNative')}>
         React Native
         </div>
         </container>
